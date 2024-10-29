@@ -19,9 +19,12 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item ">
+                    <!--*/ 인증 된 사람은 이걸 해라 이뜻임 */-->
+                <!--*/이게 다른부분이네. 시큐리티 태그를 쓸 수 있게 위에 xmlns해줬네 */-->
                     <a class="nav-link" href="/board/list">Board List</a>
                 </li>
                 <li sec:authorize="hasAnyAuthority('USER')" class="nav-item">
+                    <!--*/ USER 인증 된 사람은 이걸 해라 이뜻임 */-->
                     <a class="nav-link" href="/User">User</a>
                 </li>
 
@@ -29,6 +32,7 @@
                     <a class="nav-link" href="/admin/list">Admin</a>
                 </li>
                 <li sec:authorize="!isAuthenticated()" class="nav-item">
+                    <!--*/ 로그인 안된거 */-->
                     <a class="nav-link" href="/user/login">Login</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">

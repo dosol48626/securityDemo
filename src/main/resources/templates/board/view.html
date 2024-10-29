@@ -29,6 +29,7 @@
     <div class="form-group mt-5">
 <!--/*  수정과 삭제를 아무나 해도 되나? 아니지. 그래서 시큐리티로 여길 손 볼거임. 아예 버튼 안나오게      */-->
       <span th:if="${#authentication.principal.username==board.getWriter()}">
+          <!--*/ 이게 로그인 정보이고 이 로그인 사용자의 보드의 Writer와 같으면 밑 부분을 표시해라 */-->
         <a th:href="|@{/board/modify(num=${board.num})}|">
             <button type="button" id="btnUpdate" class="btn btn-secondary">수정</button>
         </a>

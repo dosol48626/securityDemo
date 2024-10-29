@@ -6,7 +6,7 @@
 <div layout:fragment="content">
   <div class="container">
     <h3>[[${board.writer}]]의 글 수정</h3>
-    <form action="/board/">
+    <form action="/board/modify" method="post">
       <input type="hidden" name="num" id="num" value="${board.num }">
       <div class="form-group">
         <label for="title">제목:</label>
